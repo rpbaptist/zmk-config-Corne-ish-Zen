@@ -9,6 +9,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define COLEMAK 0
+#define SYM     1
+#define NAV     2
+#define NUMPAD  3
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -22,9 +27,9 @@
 //                    | ALT | LWR | SPC |   | ENT | RSE  | GUI |
                         bindings = <
    &kp ESC        &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI &kp BSPC
-   &kp TAB        &kp A &kp R &kp S &kp F &kp G   &kp M &kp J  &kp K     &kp L   &kp O    &kp SQT
+   &lt NUMPAD TAB &kp A &kp R &kp S &kp F &kp G   &kp M &kp J  &kp K     &kp L   &kp O    &kp SQT
    &mt LCTRL LBKT &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &mt RCTRL RBKT
-                &kp LALT &mo 1 &mt LSHIFT SPACE   &mt RSHIFT RET &mo 2 &kp RGUI
+                &kp LALT &mo SYM &mt LSHIFT SPACE   &mt RSHIFT RET &mo NAV &kp RGUI
                         >;
                 };
                 lower_layer {
