@@ -27,6 +27,16 @@
                 bindings = <&kp BACKSPACE>, <&kp DEL>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
+
+          qtap: quick_tap {
+              compatible = "zmk,behavior-hold-tap";
+              label = "QUICK_TAP";
+              #binding-cells = <2>;
+              tapping-term-ms = <100>;
+              quick-tap-ms = <0>;
+              flavor = "balanced";
+              bindings = <&kp>, <&kp>;
+          };
         };
 
         keymap {
@@ -43,7 +53,7 @@
    &kp ESC        &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI &bspdel
    &lt NUMPAD TAB &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O    &kp SQT
    &mt LCTRL LBKT &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &mt RCTRL RBKT
-                &kp LALT &mo SYM &mt LSHIFT SPACE   &mt RSHIFT RET &mo NAV &kp RGUI
+                &kp LALT &mo SYM &mt LSHIFT SPACE   &qtap RSHIFT RET &mo NAV &kp RGUI
                         >;
                 };
 
