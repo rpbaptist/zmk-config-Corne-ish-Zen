@@ -15,6 +15,16 @@
 #define NUMPAD  3
 
 / {
+          behaviors {
+            bspdel: backspace_del {
+                compatible = "zmk,behavior-mod-morph";
+                label = "BACKSPACE_DEL";
+                #binding-cells = <0>;
+                bindings = <&kp BACKSPACE>, <&kp DEL>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -26,7 +36,7 @@
 // | CTRL |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | CTRL  |
 //                    | ALT | LWR | SPC |   | ENT | RSE  | GUI |
                         bindings = <
-   &kp ESC        &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI &kp BSPC
+   &kp ESC        &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI &bspdel
    &lt NUMPAD TAB &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O    &kp SQT
    &mt LCTRL LBKT &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &mt RCTRL RBKT
                 &kp LALT &mo SYM &mt LSHIFT SPACE   &mt RSHIFT RET &mo NAV &kp RGUI
