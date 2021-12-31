@@ -14,6 +14,10 @@
 #define NAV     2
 #define NUMPAD  3
 
+&mt {
+    tapping-term-ms = <120>;
+};
+
 / {
           behaviors {
             bspdel: backspace_del {
