@@ -32,9 +32,9 @@
                 &kp LALT &mo SYM &mt LSHIFT SPACE   &mt RSHIFT RET &mo NAV &kp RGUI
                         >;
                 };
+
                 sym_layer {
                         label = "SYM";
-//  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
                         bindings = <
    &kp GRAVE        &kp N1   &kp N2  &kp N3    &kp N4     &kp N5       &kp N6    &kp N7   &kp N8    &kp N9    &kp N0    &kp DEL
    &kp TILDE        &kp EXCL &kp AT  &kp HASH  &kp DLLR   &kp PRCNT    &kp CARET &kp AMPS &kp ASTRK &kp UNDER &kp MINUS &kp PLUS
@@ -46,10 +46,20 @@
                 nav_layer {
                         label = "NAV";
                         bindings = <
-   &kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4    &kp F5       &kp PG_UP  &kp HOME        &kp UP    &kp END     &kp RPAR &kp DEL
-   &kp TILDE  &kp F6  &kp F7  &kp F8  &kp F9    &kp F10      &kp PG_DN  &kp LEFT        &kp DOWN  &kp RIGHT   &none    &none
-   &kp LSHFT  &kp F11 &kp F12 &kp F13 &kp PSCRN &kp CAPS     &kp LA(F4) &kp LC(LS(TAB)) &kp LC(W) &kp LC(TAB) &kp BSLH &kp TILDE
-                          	&trans     &trans   &trans       &trans  &trans   &trans
+   &kp GRAVE       &kp F1  &kp F2  &kp F3  &kp F4    &kp F5       &kp PG_UP  &kp HOME        &kp UP    &kp END     &kp RPAR &kp DEL
+   &kp TILDE       &kp F6  &kp F7  &kp F8  &kp F9    &kp F10      &kp PG_DN  &kp LEFT        &kp DOWN  &kp RIGHT   &none    &none
+   &mt LCTRL LPAR  &kp F11 &kp F12 &kp F13 &kp PSCRN &kp CAPS     &kp LA(F4) &kp LC(LS(TAB)) &kp LC(W) &kp LC(TAB) &kp BSLH &mt RCTRL RPAR
+                          	      &trans     &trans   &trans       &trans  &trans   &trans
+                        >;
+                };
+
+                num_layer {
+                        label = "NUMPAD";
+                        bindings = <
+   &bt BT_CLR &bt BT_SEL 0 &kp C_PREV  &kp C_VOL_UP &kp C_NEXT  &none              &none     &kp N7  &kp N8  &kp N9  &trans    &trans
+   &mo NUMPAD &bt BT_SEL 0 &kp C_STOP  &kp C_VOL_DN &kp C_PP    &none              &kp UNDER &kp N4  &kp N5  &kp N6  &kp MINUS &kp PLUS
+   &none      &bt BT_SEL 2 &none       &kp C_MUTE   &kp PSCRN   &kp KP_NUM         &kp EQUAL &kp N1  &kp N2  &kp N3  &kp FSLH  &kp ASTRK
+                          	                     &trans     &trans    &trans      &trans    &kp N0   &kp DOT
                         >;
                 };
         };
