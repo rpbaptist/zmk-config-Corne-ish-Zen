@@ -9,10 +9,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define COLEMAK 0
-#define SYM     1
-#define NAV     2
-#define NUMPAD  3
+#define TYPE 0
+#define SYM  1
+#define NAV  2
+#define NUM  3
 
 &mt {
     tapping-term-ms = <140>;
@@ -44,15 +44,10 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        label = "CLMK";
-// -----------------------------------------------------------------------------------------
-// |  ESC |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  | BKSP |
-// |  TAB |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
-// | CTRL |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | CTRL  |
-//                    | ALT | LWR | SPC |   | ENT | RSE  | GUI |
+                        label = "TYPE";
                         bindings = <
    &kp ESC        &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI &bspdel
-   &lt NUMPAD TAB &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O    &kp SQT
+   &lt NUM TAB    &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O    &kp SQT
    &mt LCTRL LBKT &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &mt RCTRL RBKT
                 &kp LALT &mo SYM &mt LSHIFT SPACE   &qtap RSHIFT RET &mo NAV &kp RGUI
                         >;
@@ -79,10 +74,10 @@
                 };
 
                 num_layer {
-                        label = "NUMPAD";
+                        label = "NUM";
                         bindings = <
    &bt BT_CLR &bt BT_SEL 0 &kp C_PREV  &kp C_VOL_UP &kp C_NEXT  &none              &none     &kp N7  &kp N8  &kp N9  &trans    &trans
-   &mo NUMPAD &bt BT_SEL 1 &kp C_STOP  &kp C_VOL_DN &kp C_PP    &none              &kp UNDER &kp N4  &kp N5  &kp N6  &kp MINUS &kp PLUS
+   &mo NUM    &bt BT_SEL 1 &kp C_STOP  &kp C_VOL_DN &kp C_PP    &none              &kp UNDER &kp N4  &kp N5  &kp N6  &kp MINUS &kp PLUS
    &none      &bt BT_SEL 2 &none       &kp C_MUTE   &kp PSCRN   &kp KP_NUM         &kp EQUAL &kp N1  &kp N2  &kp N3  &kp FSLH  &kp ASTRK
                           	                     &trans     &trans    &trans      &trans    &kp N0   &kp DOT
                         >;
