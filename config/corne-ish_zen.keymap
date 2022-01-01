@@ -15,7 +15,7 @@
 #define NUM  3
 
 &mt {
-    tapping-term-ms = <140>;
+    tapping-term-ms = <160>;
     quick-tap-ms = <220>;
 };
 
@@ -34,7 +34,7 @@
               label = "QUICK_TAP";
               #binding-cells = <2>;
               tapping-term-ms = <120>;
-              quick-tap-ms = <220>;
+              quick-tap-ms = <200>;
               flavor = "balanced";
               bindings = <&kp>, <&kp>;
           };
