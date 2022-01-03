@@ -26,11 +26,11 @@
 / {
         conditional_layers {
             compatible = "zmk,conditional-layers";
-            tri_layer_1 {
+            config_from_default {
                 if-layers = <SYM NAV>;
                 then-layer = <CONFIG>;
             };
-            // tri_layer_2 {
+            // config_from_gaming {
             //     if-layers = <GAMEXT NAV>;
             //     then-layer = <CONFIG>;
             // };
