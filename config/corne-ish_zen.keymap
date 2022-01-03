@@ -10,9 +10,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define TYPE   0
-// #define GAME   1
+#define GAME   1
 // #define WASD   2
-// #define GAMEXT 3
+#define GAMEXT 3
 #define SYM    4
 #define NAV    5
 #define NUM    6
@@ -79,16 +79,16 @@
                         >;
                 };
 
-  //               game_layer {
-  //                       label = "GAME";
-  //                       bindings = <
-  //  &kp ESC   &kp Q &kp W &kp F &kp P &kp B     &kp J &kp L  &kp U     &kp Y   &kp SEMI &kp BSPC
-  //  &kp TAB   &kp A &kp R &kp S &kp T &kp G     &kp M &kp N  &kp E     &kp I   &kp O    &kp SQT
-  //  &kp LCTRL &kp Z &kp X &kp C &kp D &kp V     &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-  //          &mo GAMEEXT &kp LSHFT &kp SPACE   &shent RSHIFT RET &mo NAV &kp RGUI
-  //                       >;
-  //               };
-  // 
+                game_layer {
+                        label = "GAME";
+                        bindings = <
+   &kp ESC   &kp Q &kp W &kp F &kp P &kp B     &kp J &kp L  &kp U     &kp Y   &kp SEMI &kp BSPC
+   &kp TAB   &kp A &kp R &kp S &kp T &kp G     &kp M &kp N  &kp E     &kp I   &kp O    &kp SQT
+   &kp LCTRL &kp Z &kp X &kp C &kp D &kp V     &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
+           &mo GAMEEXT &kp LSHFT &kp SPACE   &shent RSHIFT RET &mo NAV &kp RGUI
+                        >;
+                };
+  //
   //               game_wasd_layer {
   //                       label = "WASD";
   //                       bindings = <
@@ -99,15 +99,15 @@
   //                       >;
   //               };
 
-  //               game_extension_layer {
-  //                       label = "GAMEXT";
-  //                       bindings = <
-  //  &kp GRAVE &kp N1   &kp N2  &kp N3   &kp N4  &kp N5        &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp DEL
-  //  &kp TAB   &kp Y    &kp I   &kp J    &kp M   &kp N         &trans &trans &trans &trans &trans &trans
-  //  &kp CAPS  &kp CMMA &kp DOT &kp LBKT kp RBKT &kp BSLH      &trans &trans &trans &trans &trans &trans
-  //                              &trans &kp LALT &kp ENTER    &kp ENTER &trans &trans
-  //                       >;
-  //               };
+                game_extension_layer {
+                        label = "GAMEXT";
+                        bindings = <
+   &kp GRAVE &kp N1   &kp N2  &kp N3   &kp N4  &kp N5        &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp DEL
+   &kp TAB   &kp Y    &kp I   &kp J    &kp M   &kp N         &trans &trans &trans &trans &trans &trans
+   &kp CAPS  &kp CMMA &kp DOT &kp LBKT kp RBKT &kp BSLH      &trans &trans &trans &trans &trans &trans
+                               &trans &kp LALT &kp ENTER    &kp ENTER &trans &trans
+                        >;
+                };
 
                 sym_layer {
                         label = "SYM";
@@ -143,7 +143,7 @@
                         label = "CONFIG";
                         bindings = <
    &none &none       &none &none &none &to TYPE      &none &none &none &none &none &none
-   &none &none       &none &none &none &none      &none &none &none &none &none &none
+   &none &none       &none &none &none &to GAME      &none &none &none &none &none &none
    &none &kp C_SLEEP &none &none &none &none      &none &none &none &none &none &none
                             &trans &trans &trans    &trans &trans &trans
                         >;
