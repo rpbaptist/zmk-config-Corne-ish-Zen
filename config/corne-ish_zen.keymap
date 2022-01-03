@@ -102,9 +102,9 @@
                 game_extension_layer {
                         label = "GAMEXT";
                         bindings = <
-   &kp GRAVE &kp N1   &kp N2  &kp N3   &kp N4  &kp N5        &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp DEL
-   &kp TAB   &kp Y    &kp I   &kp J    &kp M   &kp N         &trans &trans &trans &trans &trans &trans
-   &kp CAPS  &kp CMMA &kp DOT &kp LBKT kp RBKT &kp BSLH      &trans &trans &trans &trans &trans &trans
+   &kp GRAVE &kp N1   &kp N2  &kp N3   &kp N4   &kp N5        &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp DEL
+   &kp TAB   &kp Y    &kp I   &kp J    &kp M    &kp N         &trans &trans &trans &trans &trans &trans
+   &kp CAPS  &kp CMMA &kp DOT &kp LBKT &kp RBKT &kp BSLH      &trans &trans &trans &trans &trans &trans
                                &trans &kp LALT &kp ENTER    &kp ENTER &trans &trans
                         >;
                 };
