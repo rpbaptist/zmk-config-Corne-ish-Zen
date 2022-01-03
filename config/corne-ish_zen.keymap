@@ -30,10 +30,10 @@
                 if-layers = <SYM NAV>;
                 then-layer = <CONFIG>;
             };
-            // config_from_gaming {
-            //     if-layers = <GAMEXT NAV>;
-            //     then-layer = <CONFIG>;
-            // };
+            config_from_gaming {
+                if-layers = <GAMEXT NAV>;
+                then-layer = <CONFIG>;
+            };
         };
 
         behaviors {
@@ -85,7 +85,7 @@
    &kp ESC   &kp Q &kp W &kp F &kp P &kp B     &kp J &kp L  &kp U     &kp Y   &kp SEMI &kp BSPC
    &kp TAB   &kp A &kp R &kp S &kp T &kp G     &kp M &kp N  &kp E     &kp I   &kp O    &kp SQT
    &kp LCTRL &kp Z &kp X &kp C &kp D &kp V     &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-           &none &kp LSHFT &kp SPACE   &shent RSHIFT RET &mo NAV &kp RGUI
+           &mo GAMEXT &kp LSHFT &kp SPACE   &shent RSHIFT RET &mo NAV &kp RGUI
                         >;
                 };
 
@@ -95,7 +95,7 @@
    &kp ESC   &kp T &kp Q &kp W &kp E &kp R     &kp Y &kp U &kp I    &kp O   &kp P    &kp BSPC
    &kp TAB   &kp G &kp A &kp S &kp D &kp F     &kp H &kp J &kp K    &kp L   &kp QUOT    &kp SQT
    &kp LCTRL &kp B &kp Z &kp X &kp C &kp V     &kp N &kp M &kp CMMA &kp DOT &kp FSLH &kp RCTRL
-            &none &kp LSHFT &kp SPACE   &shent RSHIFT RET &mo NAV &kp RGUI
+            &mo GAMEXT &kp LSHFT &kp SPACE   &shent RSHIFT RET &mo NAV &kp RGUI
                         >;
                 };
 
