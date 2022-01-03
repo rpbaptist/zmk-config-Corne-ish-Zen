@@ -11,7 +11,7 @@
 
 #define TYPE   0
 #define GAME   1
-// #define WASD   2
+#define WASD   2
 // #define GAMEXT 3
 #define SYM    4
 #define NAV    5
@@ -88,16 +88,16 @@
            &none &kp LSHFT &kp SPACE   &shent RSHIFT RET &mo NAV &kp RGUI
                         >;
                 };
-  //
-  //               game_wasd_layer {
-  //                       label = "WASD";
-  //                       bindings = <
-  //  &kp ESC   &kp T &kp Q &kp W &kp E &kp R     &kp Y &kp U &kp I    &kp O   &kp P    &kp BSPC
-  //  &kp TAB   &kp G &kp A &kp S &kp D &kp F     &kp H &kp J &kp K    &kp L   &kp QUOT    &kp SQT
-  //  &kp LCTRL &kp B &kp Z &kp X &kp C &kp V     &kp N &kp M &kp CMMA &kp DOT &kp FSLH &kp RCTRL
-  //           &mo GAMEEXT &kp LSHFT &kp SPACE   &shent RSHIFT RET &mo NAV &kp RGUI
-  //                       >;
-  //               };
+
+                game_wasd_layer {
+                        label = "WASD";
+                        bindings = <
+   &kp ESC   &kp T &kp Q &kp W &kp E &kp R     &kp Y &kp U &kp I    &kp O   &kp P    &kp BSPC
+   &kp TAB   &kp G &kp A &kp S &kp D &kp F     &kp H &kp J &kp K    &kp L   &kp QUOT    &kp SQT
+   &kp LCTRL &kp B &kp Z &kp X &kp C &kp V     &kp N &kp M &kp CMMA &kp DOT &kp FSLH &kp RCTRL
+            &none &kp LSHFT &kp SPACE   &shent RSHIFT RET &mo NAV &kp RGUI
+                        >;
+                };
 
   //               game_extension_layer {
   //                       label = "GAMEXT";
@@ -144,7 +144,7 @@
                         bindings = <
    &none &none       &none &none &none &to TYPE      &none &none &none &none &none &none
    &none &none       &none &none &none &to GAME      &none &none &none &none &none &none
-   &none &kp C_SLEEP &none &none &none &none      &none &none &none &none &none &none
+   &none &kp C_SLEEP &none &none &none &to WASD      &none &none &none &none &none &none
                             &trans &trans &trans    &trans &trans &trans
                         >;
                 };
