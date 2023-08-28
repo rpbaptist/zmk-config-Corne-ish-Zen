@@ -26,6 +26,7 @@
               label = "BACKSPACE_DEL";
               #binding-cells = <0>;
               bindings = <&kp BACKSPACE>, <&kp DEL>;
+              wait-ms = <10>
               mods = <(MOD_LSFT|MOD_RSFT)>;
           };
 
@@ -35,6 +36,7 @@
               #binding-cells = <2>;
               tapping-term-ms = <140>;
               quick-tap-ms = <200>;
+              wait-ms = <10>
               flavor = "tap-preferred";
               bindings = <&kp>, <&kp>;
           };
@@ -45,6 +47,7 @@
               #binding-cells = <2>;
               tapping-term-ms = <120>;
               quick-tap-ms = <200>;
+              wait-ms = <10>
               flavor = "balanced";
               bindings = <&kp>, <&kp>;
           };
